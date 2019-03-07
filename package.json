@@ -1,0 +1,37 @@
+{
+    "name": "excript",
+    "version": "1.0.1",
+    "description": "Create excel file in XLS form. Now it only support basic types such as String and number and it does not support styles.",
+    "main": "index.js",
+    "scripts": {
+        "test": "./node_modules/mocha/bin/mocha -r ts-node/register src/**/*.test.ts --exit",
+        "prepare": "npm run build",
+        "build": "gulp"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/hahooh/excelXLS.git"
+    },
+    "keywords": [
+        "excel"
+    ],
+    "author": "hahooh@gmail.com",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/hahooh/excelXLS/issues"
+    },
+    "homepage": "https://github.com/hahooh/excelXLS#readme",
+    "dependencies": {},
+    "devDependencies": {
+        "@types/chai": "^4.1.7",
+        "@types/gulp": "^4.0.6",
+        "@types/mocha": "^5.2.6",
+        "gulp": "^4.0.0",
+        "gulp-typescript": "^5.0.0",
+        "ts-node": "^8.0.2",
+        "typescript": "^3.3.3333"
+    },
+    "files": [
+        "dist/**/*"
+    ]
+}
