@@ -1,6 +1,6 @@
 {
     "name": "excript",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Create excel file in XLS form. Now it only support basic types such as String and number and it does not support styles.",
     "main": "index.js",
     "scripts": {
@@ -10,7 +10,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/hahooh/excelXLS.git"
+        "url": "git+https://github.com/hahooh/excript.git"
     },
     "keywords": [
         "excel"
@@ -18,9 +18,9 @@
     "author": "hahooh@gmail.com",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/hahooh/excelXLS/issues"
+        "url": "https://github.com/hahooh/excript/issues"
     },
-    "homepage": "https://github.com/hahooh/excelXLS#readme",
+    "homepage": "https://github.com/hahooh/excript#readme",
     "dependencies": {},
     "devDependencies": {
         "@types/chai": "^4.1.7",
