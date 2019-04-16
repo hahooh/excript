@@ -11,3 +11,9 @@ test('export number data', () => {
     const excelData = data.exportData();
     expect(excelData).toBe('<Data ss:Type="Number">55</Data>');
 })
+
+test('export string data with encode XML', () => {
+    const data = new Data('<>"\'');
+    const excelData = data.exportData();
+    expect(excelData).toBe('<Data ss:Type="String">&lt;&gt;&quot;&apos;</Data>')
+});
