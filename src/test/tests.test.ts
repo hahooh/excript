@@ -1,5 +1,6 @@
 import { Data, Cell } from '..';
 import { Row } from '../components/row';
+import { Table } from '../components/table';
 
 test('export string data', () => {
     const data = new Data('hello world');
@@ -22,8 +23,7 @@ test('export string data with encode XML', () => {
 test('export cell', () => {
     const data = new Data('helloWorld');
     const cell = new Cell(data);
-    const cellExport = cell.exportCell();
-    expect(`<Cell>${data.exportData()}</Cell>`).toBe(cellExport);
+    expect(cell.exportCell()).toBe(`<Cell>${data.exportData()}</Cell>`);
 });
 
 test('export row', () => {
@@ -35,5 +35,27 @@ test('export row', () => {
         row.addCell(cell);
         cells.push(cell);
     });
-    expect(`<Row>${cells.map(cell => cell.exportCell()).join('')}</Row>`)
+    expect(row.exportRow()).toBe(`<Row>${cells.map(cell => cell.exportCell()).join('')}</Row>`);
+});
+
+test('export table', () => {
+    const table = new Table();
+    const row1 = new Row();
+    const row2 = new Row();
+    [1, 'world', 4, 5, 6, 'Hello'].forEach(el => {
+        const data = new Data(el, typeof el === 'string' ? 'String' : 'Number');
+        const cell = new Cell(data);
+        row1.addCell(cell);
+    });
+
+    [7, 'compute', 8, 9, 10, 'things', 'and <more>'].forEach(el => {
+        const data = new Data(el, typeof el === 'string' ? 'String' : 'Number');
+        const cell = new Cell(data);
+        row2.addCell(cell);
+    });
+
+    table.addRow(row1);
+    table.addRow(row2);
+
+    expect(table.exportTable()).toBe(`<Table>${row1.exportRow() + row2.exportRow()}</Table>`);
 });
