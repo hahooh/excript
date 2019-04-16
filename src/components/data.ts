@@ -16,7 +16,11 @@ export class Data {
             return this.getHeader() + this.footer;
         }
 
-        return this.getHeader() + this.encodeXML(this.value) + this.footer;
+        if (typeof this.value === 'string') {
+            return this.getHeader() + this.encodeXML(this.value) + this.footer;
+        }
+
+        return this.getHeader() + this.value + this.footer;
     }
 
     private getHeader(): string {
