@@ -1,7 +1,7 @@
 {
     "name": "excript",
-    "version": "1.0.4",
-    "description": "Create excel file in XLS form. Now it only support basic types such as String and number and it does not support styles.",
+    "version": "1.0.5",
+    "description": "Create excel file in XLS form. Now it only supports basic types such as String and Number and it does not support styles.",
     "main": "index.js",
     "scripts": {
         "test": "jest",
@@ -14,7 +14,8 @@
         "url": "git+https://github.com/hahooh/excript.git"
     },
     "keywords": [
-        "excel"
+        "excel",
+        "XLS"
     ],
     "author": "hahooh@gmail.com",
     "license": "ISC",
