@@ -1,6 +1,6 @@
 {
     "name": "excript",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "Create excel file in XLS form. Now it only supports basic types such as String and Number and it does not support styles.",
     "main": "index.js",
     "scripts": {
