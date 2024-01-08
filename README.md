@@ -34,3 +34,6 @@ excel.addWorkSheet(worksheet);
 
 // final excel in XML form<br/>
 const excelXML = excel.exportExcel();
+
+# NPM
+[you can install from here](https://www.npmjs.com/package/excript)
